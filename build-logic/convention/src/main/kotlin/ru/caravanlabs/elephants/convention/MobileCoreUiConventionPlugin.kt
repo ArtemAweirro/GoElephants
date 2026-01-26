@@ -24,7 +24,7 @@ class MobileCoreUiConventionPlugin : Plugin<Project> {
                     with(sourceSets) {
                         androidMain.dependencies {
                             implementation(preview)
-                            implementation(getLibraryFromLibsToml("androidx.activityCompose"))
+                            implementation(getLibraryFromLibsToml("androidx.activity-compose"))
                         }
                         commonMain.dependencies {
                             implementation(runtime)
@@ -34,11 +34,9 @@ class MobileCoreUiConventionPlugin : Plugin<Project> {
                             implementation(components.resources)
                             implementation(components.uiToolingPreview)
                             implementation(materialIconsExtended)
-                            implementation(getLibraryFromLibsToml("coil"))
-                            implementation(getLibraryFromLibsToml("coil.network.ktor"))
                             implementation(getLibraryFromLibsToml("multiplatformSettings"))
-                            implementation(getLibraryFromLibsToml("androidx.lifecycle.viewmodel"))
-                            implementation(getLibraryFromLibsToml("androidx.lifecycle.runtime"))
+                            implementation(getLibraryFromLibsToml("androidx.lifecycle.viewmodelCompose"))
+                            implementation(getLibraryFromLibsToml("androidx.lifecycle.runtimeCompose"))
                         }
 
                     }
