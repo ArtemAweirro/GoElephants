@@ -13,6 +13,11 @@ kotlin {
 
         }
         commonMain.dependencies {
+            implementation(project(":core:ui"))
+            implementation(project(":core:domain"))
+            implementation(project(":core:data"))
+        }
+        iosMain.dependencies {
 
         }
         commonTest.dependencies {
