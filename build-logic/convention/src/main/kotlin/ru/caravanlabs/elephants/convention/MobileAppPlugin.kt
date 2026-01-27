@@ -47,7 +47,7 @@ class MobileAppPlugin : Plugin<Project> {
                     with(sourceSets) {
                         androidMain.dependencies {
                             implementation(preview)
-                            implementation(getLibraryFromLibsToml("androidx.activityCompose"))
+                            implementation(getLibraryFromLibsToml("androidx.activity.compose"))
                         }
                         commonMain.dependencies {
                             implementation(runtime)
@@ -57,24 +57,20 @@ class MobileAppPlugin : Plugin<Project> {
                             implementation(components.resources)
                             implementation(components.uiToolingPreview)
                             implementation(materialIconsExtended)
-                            implementation(getLibraryFromLibsToml("androidx.lifecycle.viewmodel"))
-                            implementation(getLibraryFromLibsToml("androidx.lifecycle.runtime"))
-                        }
-
-                        jvmMain.dependencies {
-                            implementation(desktop.currentOs)
+                            implementation(getLibraryFromLibsToml("androidx.lifecycle.viewmodelCompose"))
+                            implementation(getLibraryFromLibsToml("androidx.lifecycle.runtimeCompose"))
                         }
                     }
                 }
             }
 
             extensions.configure<BaseAppModuleExtension> {
-                namespace = "ru.caravanlabs.elephants.template.mobile"
+                namespace = "ru.caravanlabs.elephants"
 
                 compileSdk = getVersionFromLibsToml("android.compileSdk").toInt()
 
                 defaultConfig {
-                    applicationId = "ru.caravanlabs.elephants.template.mobile"
+                    applicationId = "ru.caravanlabs.elephants"
                     minSdk = getVersionFromLibsToml("android.minSdk").toInt()
                     targetSdk = getVersionFromLibsToml("android.targetSdk").toInt()
                     versionCode = 1
