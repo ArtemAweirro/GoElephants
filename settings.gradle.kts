@@ -2,6 +2,7 @@ rootProject.name = "GoElephants"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             mavenContent {
@@ -29,3 +30,7 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
+include(":core:data")
+include(":core:domain")
+include(":core:ui")
+// include(":feature:<package>")
