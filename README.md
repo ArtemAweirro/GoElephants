@@ -1,3 +1,15 @@
+# Mobile Bootcamp 2026
+
+Bootcamp repository for mobile and cross-platform development **Student IT-Laboratory** in the direction of Kotlin Multiplatform.
+
+## How to run
+
+- Fork and clone this project
+- Run Android Studio
+- Tap button "Run 'app'"
+
+### Base readme
+
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
